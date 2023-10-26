@@ -30,6 +30,9 @@ const playersSlice = createSlice({
   name: "players",
   initialState,
   reducers: {
+    replacePlayerState(_state, action: PayloadAction<TPlayersState>) {
+      return action.payload;
+    },
     addPlayer(state, action: PayloadAction<Omit<TPlayer, "id">>) {
       state.players.push({
         id: state.players.length,
@@ -55,6 +58,6 @@ const playersSlice = createSlice({
   },
 });
 
-export const { addPlayer, deletePlayer, setActivePlayer } =
+export const { addPlayer, deletePlayer, setActivePlayer, replacePlayerState } =
   playersSlice.actions;
 export const playersReducer = playersSlice.reducer;

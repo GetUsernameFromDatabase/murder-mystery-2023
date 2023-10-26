@@ -31,7 +31,6 @@ function saveGame() {
 }
 
 function loadGame() {
-  console.log("LOAD GAME");
   const element = document.createElement("input");
   element.type = "file";
   element.accept = ".json";

@@ -1,8 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import { playersReducer } from "./slices/players-slice";
+import { playersReducer, replacePlayerState } from "./slices/players-slice";
 
 import { getFromLocaleStorage, saveToLocaleStorage } from "@/lib/local-storage";
+
+// TODO: redux undo -- https://www.npmjs.com/package/redux-undo
 
 export const store = configureStore({
   preloadedState: getFromLocaleStorage("game-state"),
@@ -22,16 +24,7 @@ store.subscribe(() => {
  * TODO: add type checking -- zod?
  */
 export function replaceStoreState(newState: RootState) {
-  store.replaceReducer((state) => {
-    console.info(
-      "Replacing store state",
-      "\n--- previousState",
-      state,
-      "\n--- newState",
-      newState,
-    );
-    return newState;
-  });
+  store.dispatch(replacePlayerState(newState.players));
 }
 
 export type RootState = ReturnType<typeof store.getState>;
