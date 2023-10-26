@@ -4,7 +4,7 @@ import { PageWrapper } from "@/components/page-wrapper";
 export function MainPage() {
   return (
     <PageWrapper>
-      <GameMap className="min-w-[200px] w-full max-h-full"></GameMap>
+      <GameMap className="max-h-[80vh] m-auto"></GameMap>
     </PageWrapper>
   );
 }
