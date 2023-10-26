@@ -6,7 +6,7 @@ import { mainRoutes } from "./configuration/router";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
         <main>
           <SiteHeader></SiteHeader>

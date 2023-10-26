@@ -9,6 +9,7 @@ const __dirname = dirname(__filename);
 
 export default defineConfig({
   plugins: [react()],
+  base: "/murder-mystery-2023",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
