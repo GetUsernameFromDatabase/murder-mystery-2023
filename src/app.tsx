@@ -1,19 +1,19 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import "./app.css";
+import { SiteHeader } from "./components/site-header";
 import { mainRoutes } from "./configuration/router";
-import { LayoutMain } from "./layouts/layout-main";
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LayoutMain />}>
+      <main>
+        <SiteHeader></SiteHeader>
+        <Routes>
           {mainRoutes.map((route, index) => (
             <Route key={index} {...route} />
           ))}
-        </Route>
-      </Routes>
+        </Routes>
+      </main>
     </BrowserRouter>
   );
 }

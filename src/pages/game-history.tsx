@@ -1,3 +1,5 @@
+import { PageWrapper } from "@/components/page-wrapper";
+
 export function GameHistory() {
-  return <div>GAME HISTORY</div>;
+  return <PageWrapper>GAME HISTORY</PageWrapper>;
 }

@@ -1,3 +1,5 @@
+import { PageWrapper } from "@/components/page-wrapper";
+
 export function NoPage() {
-  return <div>PAGE NOT FOUND</div>;
+  return <PageWrapper>PAGE NOT FOUND</PageWrapper>;
 }
