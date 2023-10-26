@@ -38,7 +38,9 @@ function GamePlayer({ player, className, ...properties }: PlayerProperties) {
     >
       <div className="flex items-center space-x-4">
         <Avatar>
-          <AvatarImage src="/game/player-token.png" />
+          <AvatarImage
+            src={new URL("/game/player-token.png", import.meta.url).href}
+          />
           <AvatarFallback>PC</AvatarFallback>
         </Avatar>
         <div>
