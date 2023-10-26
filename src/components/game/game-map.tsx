@@ -1,18 +1,11 @@
-import { cn } from "@/lib/utils";
+import { useRef } from "react";
 
-interface GameMapProperties
-  extends React.ObjectHTMLAttributes<HTMLObjectElement> {}
+import { GameMapSVG } from "./game-map-svg";
 
-// eslint-disable-next-line react/prop-types
-const GameMap: React.FC<GameMapProperties> = ({ className, ...properties }) => {
+export function GameMap() {
+  const gameMap = useRef<HTMLObjectElement | null>(null);
+  console.log(gameMap);
   return (
-    <object
-      data="/game/map.svg"
-      type="image/svg+xml"
-      className={cn("min-w-[200px]", className)}
-      {...properties}
-    ></object>
+    <GameMapSVG className="min-w-[200px] max-h-[80vh] m-auto"></GameMapSVG>
   );
-};
-
-export default GameMap;
+}
