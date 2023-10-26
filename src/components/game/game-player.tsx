@@ -39,28 +39,31 @@ function GamePlayer({ player, className, ...properties }: PlayerProperties) {
       <div className="flex items-center space-x-4">
         <Avatar>
           <AvatarImage src="/game/player-token.png" />
-          <AvatarFallback>OM</AvatarFallback>
+          <AvatarFallback>PC</AvatarFallback>
         </Avatar>
         <div>
           <p className="text-sm font-medium leading-none">{player.name}</p>
-          <p className="text-sm text-muted-foreground">m@example.com</p>
         </div>
       </div>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button
             variant="ghost"
+            title={isActivePlayer ? "Active Player" : ""}
             className="flex h-8 w-8 p-0 data-[state=open]:bg-muted"
           >
             {isActivePlayer ? (
-              <Ticket className="h-4 w-4" />
+              <Ticket className="h-4 w-4" aria-label="Active Player" />
             ) : (
-              <Accessibility className="h-4 w-4" />
+              <Accessibility
+                className="h-4 w-4"
+                aria-label="Non-Active Player"
+              />
             )}
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="w-[160px]">
-          <DropdownMenuItem onClick={setPlayerActive}>
+          <DropdownMenuItem onClick={setPlayerActive} disabled={isActivePlayer}>
             Set Active
           </DropdownMenuItem>
           <DropdownMenuItem onClick={deleteCurrentPlayer}>
