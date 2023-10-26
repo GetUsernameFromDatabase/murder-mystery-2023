@@ -26,7 +26,7 @@ export function NavigationMain({ items }: NavigationMainProperties) {
                   className={({ isActive }) =>
                     cn(
                       "flex items-center text-sm font-medium text-muted-foreground",
-                      { "bg-primary/80 text-secondary": isActive },
+                      { underline: isActive },
                       { "cursor-not-allowed opacity-80": item.disabled },
                     )
                   }
