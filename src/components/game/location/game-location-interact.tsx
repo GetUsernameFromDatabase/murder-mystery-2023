@@ -81,7 +81,7 @@ function GameLocationInteract({
         }
       }}
     >
-      <DialogContent className="max-w-fit max-h-[80%]">
+      <DialogContent className="max-w-fit max-h-[90%] ">
         <DialogHeader>
           <DialogTitle>{display.locationLable}</DialogTitle>
           <DialogDescription>

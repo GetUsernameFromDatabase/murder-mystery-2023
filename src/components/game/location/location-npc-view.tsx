@@ -22,7 +22,7 @@ export function LocationNpcView({ location }: LocationNpcViewProperties) {
           effect="blur"
           width="100%"
           alt={circusPerson.name}
-          className="max-w-lg"
+          className="max-w-lg max-h-[60vh]"
         ></LazyLoadImage>
       ))}
     </>
