@@ -36,7 +36,7 @@ const playersSlice = createSlice({
     },
     addPlayer(state, action: PayloadAction<Omit<TPlayer, "location">>) {
       playersAdapter.addOne(state.players, {
-        location: "circus_main",
+        location: "circus_parkiing",
         ...action.payload,
       });
       if (!state.activePlayer) state.activePlayer = action.payload.name;
