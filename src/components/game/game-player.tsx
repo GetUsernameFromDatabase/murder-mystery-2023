@@ -1,5 +1,5 @@
 import { Accessibility, Ticket } from "lucide-react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { Button } from "../ui/button";
@@ -11,8 +11,8 @@ import {
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 
+import { useActivePlayer } from "@/hooks/use-player";
 import { cn } from "@/lib/utils";
-import type { RootState } from "@/store";
 import {
   type TPlayer,
   deletePlayer,
@@ -24,13 +24,12 @@ interface PlayerProperties extends React.HtmlHTMLAttributes<HTMLDivElement> {
 }
 
 function GamePlayer({ player, className, ...properties }: PlayerProperties) {
-  const activePlayer = useSelector(
-    (state: RootState) => state.players.activePlayer,
-  );
   const dispatch = useDispatch();
-  const setPlayerActive = () => dispatch(setActivePlayer(player.id));
-  const deleteCurrentPlayer = () => dispatch(deletePlayer(player.id));
-  const isActivePlayer = player.id === activePlayer?.id;
+  const activePlayer = useActivePlayer();
+  const isActivePlayer = player.name === activePlayer?.name;
+
+  const setPlayerActive = () => dispatch(setActivePlayer(player.name));
+  const deleteCurrentPlayer = () => dispatch(deletePlayer(player.name));
   return (
     <div
       className={cn("flex items-center justify-between space-x-4", className)}
@@ -38,8 +37,9 @@ function GamePlayer({ player, className, ...properties }: PlayerProperties) {
     >
       <div className="flex items-center space-x-4">
         <Avatar>
+          {/* TODO: use icon instead with player colour */}
           <AvatarImage
-            src={new URL("/game/player-token.png", import.meta.url).href}
+            src={new URL("/game/token-npc.png", import.meta.url).href}
           />
           <AvatarFallback>PC</AvatarFallback>
         </Avatar>
