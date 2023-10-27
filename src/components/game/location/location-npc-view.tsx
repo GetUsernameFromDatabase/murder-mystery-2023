@@ -15,13 +15,16 @@ export function LocationNpcView({ location }: LocationNpcViewProperties) {
   const circusPeople = gameCircusPeople[location];
   return (
     <>
-      <LazyLoadImage
-        src={circusPeople.avatar.href}
-        effect="blur"
-        width="100%"
-        height="100%"
-        alt={circusPeople.name}
-      ></LazyLoadImage>
+      {circusPeople.map((circusPerson, index) => (
+        <LazyLoadImage
+          key={index}
+          src={circusPerson.avatar.href}
+          effect="blur"
+          width="100%"
+          alt={circusPerson.name}
+          className="max-w-lg"
+        ></LazyLoadImage>
+      ))}
     </>
   );
 }

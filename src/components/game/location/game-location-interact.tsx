@@ -48,15 +48,15 @@ function GameLocationInteract({
 
   const display = {
     locationLable: location ? gameMapLocations[location].label : "No Location",
-    circusPeopleLable: circusPeople?.name
-      ? `Behold ${circusPeople?.name}`
+    circusPeopleLable: circusPeople
+      ? `Behold ${circusPeople.map((value) => value.name).join(", ")}`
       : "No one here, hmmm",
   };
 
   const updatePlayerLocation = () =>
     dispatch(updateActivePlayer({ location: location }));
 
-  const defaultView = (
+  const DefaultView = () => (
     <>
       {activePlayer ? (
         activePlayer.location === location ? (
@@ -72,21 +72,6 @@ function GameLocationInteract({
       )}
     </>
   );
-  const view = () => {
-    switch (currentView) {
-      case "npc": {
-        return LocationNpcView({
-          location: location as TAvailableCircusPeople,
-        });
-      }
-      case "curiosity": {
-        return defaultView;
-      }
-      default: {
-        return defaultView;
-      }
-    }
-  };
   return (
     <Dialog
       open={properties.open}
@@ -96,7 +81,7 @@ function GameLocationInteract({
         }
       }}
     >
-      <DialogContent className="sm:max-w-md">
+      <DialogContent className="max-w-fit max-h-[80%]">
         <DialogHeader>
           <DialogTitle>{display.locationLable}</DialogTitle>
           <DialogDescription>
@@ -105,7 +90,15 @@ function GameLocationInteract({
             {currentView === "curiosity" && "MARION, YOUR TIME TO SHINE"}
           </DialogDescription>
         </DialogHeader>
-        <div className="flex items-center space-x-6 mx-auto">{view()}</div>
+        <div className="flex items-center space-x-6 mx-auto">
+          {!currentView && <DefaultView></DefaultView>}
+          {currentView === "npc" && (
+            <LocationNpcView
+              location={location as TAvailableCircusPeople}
+            ></LocationNpcView>
+          )}
+          {currentView === "curiosity" && <DefaultView></DefaultView>}
+        </div>
         <DialogFooter className="sm:justify-between">
           <DialogClose asChild>
             <Button type="button" variant="secondary">
