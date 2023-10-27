@@ -18,18 +18,21 @@ export const gameCircusPeople: Record<
   circus_main: [
     {
       name: "Victor Macaroni",
-      avatar: new URL("/game/circus_people/circus_main.png", import.meta.url),
+      avatar: new URL("/game/circus_people/circus_main.webp", import.meta.url),
     },
     {
       name: "Reya Lagrace",
-      avatar: new URL("/game/circus_people/circus_main_2.png", import.meta.url),
+      avatar: new URL(
+        "/game/circus_people/circus_main_2.webp",
+        import.meta.url,
+      ),
     },
   ],
   circus_parkiing: [
     {
       name: "Detective Cabarone", // My wife will kill me for adding Cabarone
       avatar: new URL(
-        "/game/circus_people/circus_parkiing.png",
+        "/game/circus_people/circus_parkiing.webp",
         import.meta.url,
       ),
     },
@@ -38,7 +41,7 @@ export const gameCircusPeople: Record<
     {
       name: "Chesty Fields",
       avatar: new URL(
-        "/game/circus_people/circus_bourlesqe.png",
+        "/game/circus_people/circus_bourlesqe.webp",
         import.meta.url,
       ),
     },
@@ -46,14 +49,17 @@ export const gameCircusPeople: Record<
   circus_animal: [
     {
       name: "Jeremiah Fiddlesticks",
-      avatar: new URL("/game/circus_people/circus_animal.png", import.meta.url),
+      avatar: new URL(
+        "/game/circus_people/circus_animal.webp",
+        import.meta.url,
+      ),
     },
   ],
   ciircus_feerris: [
     {
       name: "Bobo the Clown",
       avatar: new URL(
-        "/game/circus_people/ciircus_feerris.jpg",
+        "/game/circus_people/ciircus_feerris.webp",
         import.meta.url,
       ),
     },
@@ -61,14 +67,14 @@ export const gameCircusPeople: Record<
   circus_bar: [
     {
       name: "Ray Fay",
-      avatar: new URL("/game/circus_people/circus_bar.png", import.meta.url),
+      avatar: new URL("/game/circus_people/circus_bar.webp", import.meta.url),
     },
   ],
   circus_fortune: [
     {
       name: "Sybil Fortuna",
       avatar: new URL(
-        "/game/circus_people/circus_fortune.png",
+        "/game/circus_people/circus_fortune.webp",
         import.meta.url,
       ),
     },
