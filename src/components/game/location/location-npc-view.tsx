@@ -17,9 +17,9 @@ export function LocationNpcView({ location }: LocationNpcViewProperties) {
     <>
       <LazyLoadImage
         src={circusPeople.avatar.href}
-        loading="lazy"
         effect="blur"
-        height={300}
+        width="100%"
+        height="100%"
         alt={circusPeople.name}
       ></LazyLoadImage>
     </>
