@@ -11,7 +11,6 @@ interface LocationNpcViewProperties {
   location: TAvailableCircusPeople;
 }
 export function LocationNpcView({ location }: LocationNpcViewProperties) {
-  // TODO: fix this type mess
   const circusPeople = gameCircusPeople[location];
   return (
     <>

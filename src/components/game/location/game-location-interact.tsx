@@ -13,6 +13,7 @@ import {
   DialogTitle,
 } from "../../ui/dialog";
 
+import { LocationCuriosityView } from "./location-curiosity-view";
 import { LocationNpcView } from "./location-npc-view";
 import { PlayerNotOnLocation } from "./player-not-on-location";
 import { PlayerOnLocation } from "./player-on-location";
@@ -97,7 +98,9 @@ function GameLocationInteract({
               location={location as TAvailableCircusPeople}
             ></LocationNpcView>
           )}
-          {currentView === "curiosity" && <DefaultView></DefaultView>}
+          {currentView === "curiosity" && (
+            <LocationCuriosityView></LocationCuriosityView>
+          )}
         </div>
         <DialogFooter className="sm:justify-between">
           <DialogClose asChild>
