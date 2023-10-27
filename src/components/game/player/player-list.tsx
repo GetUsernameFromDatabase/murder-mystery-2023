@@ -6,7 +6,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "../ui/card";
+} from "../../ui/card";
 
 import AddPlayer from "./add-player";
 import GamePlayer from "./game-player";

@@ -1,14 +1,14 @@
 import { Accessibility, Ticket, VenetianMask } from "lucide-react";
 import { useDispatch } from "react-redux";
 
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
-} from "../ui/dropdown-menu";
+} from "../../ui/dropdown-menu";
 
 import { useActivePlayer } from "@/hooks/use-player";
 import { cn } from "@/lib/utils";

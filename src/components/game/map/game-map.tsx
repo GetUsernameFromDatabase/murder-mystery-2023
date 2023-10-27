@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-import GameLocationInteract from "./game-location-interact";
+import GameLocationInteract from "../location/game-location-interact";
+
 import { GameMapSVG } from "./game-map-svg";
 
 import type { AvailableGameMapLocations } from "@/data/game-map";
@@ -26,6 +27,7 @@ export function GameMap() {
           dialogWantsToClose={() => {
             setShowLocationInteract(false);
             // This is to avoid component visually reacting to location change before closing
+            // TODO: find a better way
             setTimeout(() => {
               setSelectedLocation(null);
             }, 200);

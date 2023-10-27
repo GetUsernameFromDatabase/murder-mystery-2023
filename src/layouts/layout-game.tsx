@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 
-import PlayerList from "@/components/game/player-list";
+import PlayerList from "@/components/game/player/player-list";
 
 export function LayoutGame() {
   return (

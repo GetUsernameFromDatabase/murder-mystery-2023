@@ -4,14 +4,14 @@ import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import * as z from "zod";
 
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import {
   Command,
   CommandEmpty,
   CommandGroup,
   CommandInput,
   CommandItem,
-} from "../ui/command";
+} from "../../ui/command";
 import {
   Dialog,
   DialogContent,
@@ -20,7 +20,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "../ui/dialog";
+} from "../../ui/dialog";
 import {
   Form,
   FormControl,
@@ -29,9 +29,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "../ui/form";
-import { Input } from "../ui/input";
-import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
+} from "../../ui/form";
+import { Input } from "../../ui/input";
+import { Popover, PopoverContent, PopoverTrigger } from "../../ui/popover";
 
 import { availablePlayerColours } from "@/data/players";
 import { cn } from "@/lib/utils";
