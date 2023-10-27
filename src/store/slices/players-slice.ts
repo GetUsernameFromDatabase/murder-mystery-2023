@@ -5,10 +5,12 @@ import { createEntityAdapter, createSlice } from "@reduxjs/toolkit";
 import type { RootState } from "..";
 
 import type { AvailableGameMapLocations } from "@/data/game-map";
+import type { TAvailablePlayerColour } from "@/data/players";
 
 export interface TPlayer {
   name: string;
   location: AvailableGameMapLocations;
+  colour: TAvailablePlayerColour;
 }
 
 const playersAdapter = createEntityAdapter<TPlayer>({

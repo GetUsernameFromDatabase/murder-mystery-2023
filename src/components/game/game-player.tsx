@@ -1,7 +1,6 @@
-import { Accessibility, Ticket } from "lucide-react";
+import { Accessibility, Ticket, VenetianMask } from "lucide-react";
 import { useDispatch } from "react-redux";
 
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { Button } from "../ui/button";
 import {
   DropdownMenu,
@@ -36,13 +35,7 @@ function GamePlayer({ player, className, ...properties }: PlayerProperties) {
       {...properties}
     >
       <div className="flex items-center space-x-4">
-        <Avatar>
-          {/* TODO: use icon instead with player colour */}
-          <AvatarImage
-            src={new URL("/game/token-npc.png", import.meta.url).href}
-          />
-          <AvatarFallback>PC</AvatarFallback>
-        </Avatar>
+        <VenetianMask className={`text-[${player.colour}]`}></VenetianMask>
         <div>
           <p className="text-sm font-medium leading-none">{player.name}</p>
         </div>

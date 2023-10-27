@@ -1,4 +1,6 @@
 import type { AvailableGameMapLocations } from "@/data/game-map";
+import { useActivePlayer } from "@/hooks/use-player";
+import { cn } from "@/lib/utils";
 
 export interface GameMapTentPavementProperties {
   id: AvailableGameMapLocations;
@@ -6,15 +8,20 @@ export interface GameMapTentPavementProperties {
   onPavementClick?: (location: AvailableGameMapLocations) => void;
 }
 export function GameMapTentPavement({
+  id,
   ...properties
 }: GameMapTentPavementProperties) {
+  const activePlayer = useActivePlayer();
   return (
     <g
-      id={properties.id}
-      className="fill-[#d8ae50] hover:fill-teal-600"
+      id={id}
+      className={cn(
+        "fill-[#d8ae50] hover:fill-teal-600",
+        activePlayer?.location === id &&
+          `fill-[${activePlayer.colour}] hover:fill-[${activePlayer.colour}]/80`,
+      )}
       onClick={() => {
-        if (properties.onPavementClick)
-          properties.onPavementClick(properties.id);
+        if (properties.onPavementClick) properties.onPavementClick(id);
       }}
     >
       {properties.children}
