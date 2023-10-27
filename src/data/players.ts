@@ -1,17 +1,18 @@
 export type TAvailablePlayerColour = (typeof availablePlayerColours)[number];
 
 // The comments are for tailwind -- I really would like a better way
-// This got ridiculous fast
+//  This got ridiculous fast
+// Useful colour site https://www.colorhexa.com/
 export const availablePlayerColours = [
-  "#0c505b", // bg-[#0c505b] aria-selected:bg-[#0c505b]/60 hover:bg-[#0c505b]/60 text-[#0c505b] fill-[#0c505b] hover:fill-[#0c505b]/80
-  "#ea580c", // bg-[#ea580c] aria-selected:bg-[#ea580c]/60 hover:bg-[#ea580c]/60 text-[#ea580c] fill-[#ea580c] hover:fill-[#ea580c]/80
-  "#facc15", // bg-[#facc15] aria-selected:bg-[#facc15]/60 hover:bg-[#facc15]/60 text-[#facc15] fill-[#facc15] hover:fill-[#facc15]/80
-  "#a3e635", // bg-[#a3e635] aria-selected:bg-[#a3e635]/60 hover:bg-[#a3e635]/60 text-[#a3e635] fill-[#a3e635] hover:fill-[#a3e635]/80
-  "#34d399", // bg-[#34d399] aria-selected:bg-[#34d399]/60 hover.bg-[#34d399]/60 text-[#34d399] fill-[#34d399] hover:fill-[#34d399]/80
-  "#22d3ee", // bg-[#22d3ee] aria-selected:bg-[#22d3ee]/60 hover.bg-[#22d3ee]/60 text-[#22d3ee] fill-[#22d3ee] hover:fill-[#22d3ee]/80
-  "#2563eb", // bg-[#2563eb] aria-selected:bg-[#2563eb]/60 hover.bg-[#2563eb]/60 text-[#2563eb] fill-[#2563eb] hover:fill-[#2563eb]/80
-  "#4f46e5", // bg-[#4f46e5] aria-selected:bg-[#4f46e5]/60 hover.bg-[#4f46e5]/60 text-[#4f46e5] fill-[#4f46e5] hover:fill-[#4f46e5]/80
-  "#d946ef", // bg-[#d946ef] aria-selected:bg-[#d946ef]/60 hover.bg-[#d946ef]/60 text-[#d946ef] fill-[#d946ef] hover:fill-[#d946ef]/80
-  "#db2777", // bg-[#db2777] aria-selected:bg-[#db2777]/60 hover.bg-[#db2777]/60 text-[#db2777] fill-[#db2777] hover:fill-[#db2777]/80
-  "#be123c", // bg-[#be123c] aria-selected:bg-[#be123c]/60 hover.bg-[#be123c]/60 text-[#be123c] fill-[#be123c] hover:fill-[#be123c]/80
+  "#009999", // bg-[#009999] aria-selected:bg-[#009999]/60 hover:bg-[#009999]/60 text-[#009999] fill-[#009999] hover:fill-[#009999]/80
+  "#ff6600", // bg-[#ff6600] aria-selected:bg-[#ff6600]/60 hover:bg-[#ff6600]/60 text-[#ff6600] fill-[#ff6600] hover:fill-[#ff6600]/80
+  "#ffcc00", // bg-[#ffcc00] aria-selected:bg-[#ffcc00]/60 hover:bg-[#ffcc00]/60 text-[#ffcc00] fill-[#ffcc00] hover:fill-[#ffcc00]/80
+  "#99ff33", // bg-[#99ff33] aria-selected:bg-[#99ff33]/60 hover:bg-[#99ff33]/60 text-[#99ff33] fill-[#99ff33] hover:fill-[#99ff33]/80
+  "#33cc99", // bg-[#33cc99] aria-selected:bg-[#33cc99]/60 hover.bg-[#33cc99]/60 text-[#33cc99] fill-[#33cc99] hover:fill-[#33cc99]/80
+  "#33ccff", // bg-[#33ccff] aria-selected:bg-[#33ccff]/60 hover.bg-[#33ccff]/60 text-[#33ccff] fill-[#33ccff] hover:fill-[#33ccff]/80
+  "#3366ff", // bg-[#3366ff] aria-selected:bg-[#3366ff]/60 hover.bg-[#3366ff]/60 text-[#3366ff] fill-[#3366ff] hover:fill-[#3366ff]/80
+  "#6633cc", // bg-[#6633cc] aria-selected:bg-[#6633cc]/60 hover.bg-[#6633cc]/60 text-[#6633cc] fill-[#6633cc] hover:fill-[#6633cc]/80
+  "#cc33ff", // bg-[#cc33ff] aria-selected:bg-[#cc33ff]/60 hover.bg-[#cc33ff]/60 text-[#cc33ff] fill-[#cc33ff] hover:fill-[#cc33ff]/80
+  "#cc3366", // bg-[#cc3366] aria-selected:bg-[#cc3366]/60 hover.bg-[#cc3366]/60 text-[#cc3366] fill-[#cc3366] hover:fill-[#cc3366]/80
+  "#cc0033", // bg-[#cc0033] aria-selected:bg-[#cc0033]/60 hover.bg-[#cc0033]/60 text-[#cc0033] fill-[#cc0033] hover:fill-[#cc0033]/80
 ] as const;

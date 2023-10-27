@@ -49,7 +49,7 @@ function AddPlayer() {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
-      colour: "#0c505b",
+      colour: "#009999",
     },
   });
 
