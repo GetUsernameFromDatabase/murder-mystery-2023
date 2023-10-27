@@ -15,7 +15,7 @@ export interface TPlayer {
 
 const playersAdapter = createEntityAdapter<TPlayer>({
   selectId: (player) => player.name,
-  sortComparer: (a, b) => b.name.localeCompare(a.name),
+  sortComparer: (a, b) => a.name.localeCompare(b.name),
 });
 
 type TPlayersState = {
@@ -39,6 +39,7 @@ const playersSlice = createSlice({
         location: "circus_main",
         ...action.payload,
       });
+      if (!state.activePlayer) state.activePlayer = action.payload.name;
     },
     deletePlayer(state, action: PayloadAction<EntityId>) {
       const payload = action.payload;
