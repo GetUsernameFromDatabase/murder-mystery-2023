@@ -55,6 +55,7 @@ function AddPlayer() {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     dispatch(addPlayer({ ...values }));
+    form.setValue("name", "");
   }
 
   return (
