@@ -12,9 +12,10 @@ import AddPlayer from "./add-player";
 import GamePlayer from "./game-player";
 
 import type { RootState } from "@/store";
+import { selectAllPlayers } from "@/store/slices/players-slice";
 
 const PlayerList: React.FC = () => {
-  const players = useSelector((state: RootState) => state.players.players);
+  const players = useSelector((state: RootState) => selectAllPlayers(state));
 
   return (
     <Card>
